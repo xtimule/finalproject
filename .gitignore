@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 *.swp
 static/
-
+.idea/
 # C extension
 *.so
 
