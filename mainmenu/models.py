@@ -15,4 +15,11 @@ class Tovar(models.Model):
     category = models.ForeignKey(Category, related_name='tovary', on_delete=models.CASCADE)
     brand = models.CharField(max_length=50, default='')
     weight = models.IntegerField()
-# Create your models here.
+
+class Order(models.Model):
+    id = models.IntegerField()
+    status = models.CharField(max_length=50)
+class Order_products(models.Model):
+    product = models.IntegerField()
+    total = models.IntegerField()
+    sum = models.IntegerField()
