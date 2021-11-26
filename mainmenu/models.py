@@ -13,4 +13,6 @@ class Tovar(models.Model):
     photo = models.ImageField()
     cost = models.IntegerField()
     category = models.ForeignKey(Category, related_name='tovary', on_delete=models.CASCADE)
+    brand = models.CharField(max_length=50, default='')
+    weight = models.IntegerField()
 # Create your models here.
