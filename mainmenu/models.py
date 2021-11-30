@@ -17,4 +17,4 @@ class Tovar(models.Model):
     weight = models.IntegerField()
     shtrix = models.IntegerField()
     manufacturer = models.CharField(max_length=50)
-    numbers = models.IntegerField(default=0)
+    number = models.IntegerField(default=0)
