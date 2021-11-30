@@ -22,4 +22,3 @@ class TovarListView(generics.ListCreateAPIView):
 class TovarDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Tovar.objects.all
     serializer_class = TovarSerializer
-
