@@ -15,6 +15,6 @@ class Tovar(models.Model):
     category = models.ForeignKey(Category, related_name='tovary', on_delete=models.CASCADE)
     brand = models.CharField(max_length=50, default='')
     weight = models.IntegerField()
-    shtrix = models.IntegerField()
+    shtrix = models.CharField(max_length=50)
     manufacturer = models.CharField(max_length=50)
     number = models.IntegerField(default=0)
