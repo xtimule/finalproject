@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'goods.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'goodsdb',
         'USER': 'postgres',
         'PASSWORD': 'qwertyc1',
         'HOST': '127.0.0.1',
