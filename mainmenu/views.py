@@ -20,5 +20,5 @@ class TovarListView(generics.ListCreateAPIView):
     filter_backends = [filters.SearchFilter, DjangoFilterBackend]
     filterset_fields = ['name']
 class TovarDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Tovar.objects.all
+    queryset = Tovar.objects.all()
     serializer_class = TovarSerializer
