@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'mainmenu',
     'django_filters',
     'drf_yasg',
+    'knox',
 ]
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": 'rest_framework.pagination.PageNumberPagination',
