@@ -21,8 +21,6 @@ class TovarListView(generics.ListCreateAPIView):
     serializer_class = TovarSerializer
     filter_backends = [filters.SearchFilter, DjangoFilterBackend]
     filterset_fields = ['name']
-    authentication_classes = [BasicAuthentication]
-    permission_classes = [IsAuthenticated, DjangoModelPermissions]
 class TovarDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Tovar.objects.all()
     serializer_class = TovarSerializer
