@@ -1,8 +1,12 @@
-from django.urls import path
+from django.urls import path, include
 from .views import *
+from rest_framework.routers import DefaultRouter
+router = DefaultRouter
+router.register()
+router.register('carditem', CardItemViewSet)
+router.register('card', CardViewSet)
+router.register('tovar', TovarViewSet)
+router.register('category', CategoryViewSet)
 urlpatterns = [
-    path('category', CategoryListView.as_view()),
-    path('category/<int:pk>', CategoryDetailView.as_view()),
-    path('tovar', TovarListView.as_view()),
-    path('tovar/<int:pk>', TovarDetailView.as_view()),
+    path('', include(router.urls)),
 ]
