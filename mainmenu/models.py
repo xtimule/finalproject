@@ -18,8 +18,8 @@ class Tovar(models.Model):
     shtrix = models.CharField(max_length=50)
     manufacturer = models.CharField(max_length=50)
     number = models.IntegerField(default=0)
-
-
+    def __str__(self):
+        return self.name
 class Card(models.Model):
     user = models.ForeignKey(get_user_model(), related_name="cards", on_delete=models.PROTECT, default=None)
     is_sold = models.BooleanField(default=False)
