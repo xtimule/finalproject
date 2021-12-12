@@ -2,7 +2,6 @@ from django.urls import path, include
 from .views import *
 from rest_framework.routers import DefaultRouter
 router = DefaultRouter
-router.register()
 router.register('carditem', CardItemViewSet)
 router.register('card', CardViewSet)
 router.register('tovar', TovarViewSet)
