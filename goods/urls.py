@@ -40,7 +40,7 @@ urlpatterns = [
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('admin/', admin.site.urls),
     path('', include('mainmenu.urls')),
-    path('register/', include('account.urls'))
+    path('register/', include('account.urls')),
 ]
 if DEBUG:
     urlpatterns += static(STATIC_URL, document_root = STATIC_ROOT)
