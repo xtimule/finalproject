@@ -8,4 +8,5 @@ router.register('tovar', TovarViewSet)
 router.register('category', CategoryViewSet)
 urlpatterns = [
     path('', include(router.urls)),
+    path('add_card/', add_cart)
 ]

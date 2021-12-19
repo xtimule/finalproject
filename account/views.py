@@ -28,8 +28,6 @@ class LoginAPI(KnoxLoginView):
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data['user']
         login(request, user)
-        obj = super(LoginAPI, self).post(request, format=None)
-        obj.data['user']=user.id
-        return obj
+        return super(LoginAPI, self).post(request, format=None)
 # Create your views here.
 
