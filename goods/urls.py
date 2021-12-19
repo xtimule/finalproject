@@ -20,6 +20,7 @@ from drf_yasg import openapi
 from rest_framework import permissions
 from .settings import DEBUG, STATIC_URL, STATIC_ROOT, MEDIA_URL, MEDIA_ROOT
 from django.conf.urls.static import static
+from mainmenu.views import add_cart
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -41,6 +42,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('mainmenu.urls')),
     path('register/', include('account.urls')),
+    path('add_cart', add_cart)
 ]
 if DEBUG:
     urlpatterns += static(STATIC_URL, document_root = STATIC_ROOT)
