@@ -6,7 +6,7 @@ router.register('carditem', CardItemViewSet)
 router.register('card', CardViewSet)
 router.register('tovar', TovarViewSet)
 router.register('category', CategoryViewSet)
+router.register('add_cart', add_cart)
 urlpatterns = [
     path('', include(router.urls)),
-    path('add_card/', add_cart)
 ]
